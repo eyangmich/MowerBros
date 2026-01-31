@@ -1,0 +1,38 @@
+/* Custom styles */
+body {
+    overflow-x: hidden;
+}
+
+/* Section spacing */
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Custom underline effect */
+.underline-effect {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-effect::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #22c55e;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.underline-effect:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Form input focus effect */
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.2);
+}
